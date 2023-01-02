@@ -17,10 +17,10 @@ public extension UIImage {
      
      - returns: thumb image
      */
-    func wxCompress(type: WechatCompressType = .timeline) -> UIImage {
-        let size = self.wxImageSize(type: type)
+    func wxCompress(compressionQuality : Float) -> UIImage {
+        let size = self.wxImageSize(type: .timeline)
         let reImage = resizedImage(size: size)
-        let data = reImage.jpegData(compressionQuality: 0.5)!
+        let data = reImage.jpegData(compressionQuality: CGFloat(compressionQuality))!
         return UIImage.init(data: data)!
     }
     
