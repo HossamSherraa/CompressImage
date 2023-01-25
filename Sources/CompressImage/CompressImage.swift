@@ -7,6 +7,9 @@ public enum WechatCompressType {
 }
 
 
+//https://huggingface.co/?doi=true
+//https://api-inference.huggingface.co/models/WarriorMama777/OrangeMixs
+
 
 public extension UIImage {
     func resizeImage(targetSize: CGSize) -> UIImage? {
